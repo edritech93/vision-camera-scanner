@@ -9,11 +9,11 @@
 
 @implementation RegisterPlugins
 
-    + (void) load {
-        [FrameProcessorPluginRegistry addFrameProcessorPlugin:@"scanCode"
-                                              withInitializer:^FrameProcessorPlugin*(NSDictionary* options) {
-            return [[VisionCameraScanner alloc] init];
-        }];
-    }
++ (void) load {
+    [FrameProcessorPluginRegistry addFrameProcessorPlugin:@"scanCode"
+                                          withInitializer:^FrameProcessorPlugin*(NSDictionary* options) {
+        return [[VisionCameraScanner alloc] init];
+    }];
+}
 
 @end
